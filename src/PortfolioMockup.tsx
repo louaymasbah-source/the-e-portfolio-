@@ -4,17 +4,18 @@ export default function PortfolioMockup() {
   const [mobTab, setMobTab] = useState<'LV2' | 'PCE' | 'EXP'>('LV2');
   const [engTab, setEngTab] = useState<'projects' | 'productions'>('projects');
 
-  const LINKS = {
-  cvEn: "/cv-en.pdf",
-  cvFr: "/cv-fr.pdf",
+const BASE = import.meta.env.BASE_URL; // "/the-e-portfolio-/" on Pages, "/" in dev
+
+const LINKS = {
+  cvEn: `${BASE}cv-en.pdf`,
+  cvFr: `${BASE}cv-fr.pdf`,
   linkedin: "https://www.linkedin.com/in/louay-masbah-711188341",
   email: "mailto:louaymasbah@gmail.com",
-  // use a valid YT link (watch or embed):
   pitchVideo: "https://www.youtube.com/watch?v=2CWVGHkkWy8",
-  // for Drive, prefer /preview so it opens inline:
   tipeSlides: "https://drive.google.com/file/d/1rBdeMRVXxDqWugvwFWGsc1NjZCaESYF3/preview",
   tipeNotes: "https://docs.google.com/document/d/1n04_DgZ6X4YsNfIAeyFvhVteFrTsB5RaXlLdyD2nBr0/preview",
 };
+
 
 
   return (

@@ -1,21 +1,22 @@
 /// <reference types="vite/client" />
 import React, { useState } from "react";
 
+// Import your actual files (with spaces & parentheses)
+import photoWelcome from "./assets/photo (2).jpg";
+import cvEnglish from "./assets/CV eng-fr-1.pdf";
+import cvFrench from "./assets/CV eng-fr-2.pdf";
+
 export default function PortfolioMockup() {
   const [mobTab, setMobTab] = useState<"LV2" | "PCE" | "EXP">("LV2");
   const [engTab, setEngTab] = useState<"projects" | "productions">("projects");
 
-  // "/the-e-portfolio-/" on GitHub Pages, "/" in dev
-  const BASE = import.meta.env.BASE_URL;
-
   const LINKS = {
-    cvEn: `"./CV eng-fr-1.pdf"`,
-    cvFr: `"./CV eng-fr-2.pdf"`,
     linkedin: "https://www.linkedin.com/in/louay-masbah-711188341",
     email: "mailto:louaymasbah@gmail.com",
     pitchVideoWatch: "https://www.youtube.com/watch?v=2CWVGHkkWy8",
     pitchVideoEmbed: "https://www.youtube.com/embed/2CWVGHkkWy8",
-    tipeSlides: "https://drive.google.com/file/d/1rBdeMRVXxDqWugvwFWGsc1NjZCaESYF3/preview",
+    tipeSlides:
+      "https://drive.google.com/file/d/1rBdeMRVXxDqWugvwFWGsc1NjZCaESYF3/preview",
     tipeNotes:
       "https://docs.google.com/document/d/1n04_DgZ6X4YsNfIAeyFvhVteFrTsB5RaXlLdyD2nBr0/preview",
   };
@@ -32,32 +33,18 @@ export default function PortfolioMockup() {
             <div className="font-semibold">Louay Masbah - E-Portfolio</div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Primary">
-            <a href="#welcome" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Welcome
-            </a>
-            <a href="#career" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Career Project
-            </a>
-            <a href="#engineering" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Engineering Course
-            </a>
-            <a href="#international" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Languages
-            </a>
-            <a href="#civic" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Sustainability & Civic
-            </a>
-            <a href="#activities" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Sport & Activities
-            </a>
-            <a href="#career-dev" className="hover:text-slate-900 hover:underline underline-offset-4 transition">
-              Career Dev
-            </a>
+            <a href="#welcome" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Welcome</a>
+            <a href="#career" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Career Project</a>
+            <a href="#engineering" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Engineering Course</a>
+            <a href="#international" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Languages</a>
+            <a href="#civic" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Sustainability & Civic</a>
+            <a href="#activities" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Sport & Activities</a>
+            <a href="#career-dev" className="hover:text-slate-900 hover:underline underline-offset-4 transition">Career Dev</a>
           </nav>
         </div>
       </header>
 
-      {/* Top progress accent */}
+      {/* Top accent */}
       <div id="scroll-progress" className="fixed top-0 left-0 h-1 bg-gradient-to-r from-indigo-600 via-fuchsia-500 to-violet-600 z-[60]" style={{ width: "0%" }} />
       <div className="h-[6px] w-full bg-gradient-to-r from-indigo-600 via-fuchsia-500 to-violet-600/70" />
 
@@ -76,7 +63,7 @@ export default function PortfolioMockup() {
           </div>
           <div className="aspect-video rounded-2xl bg-white/80 border shadow-md ring-1 ring-indigo-100 overflow-hidden">
             <img
-              src={`${BASE}photo.jpg`}
+              src={photoWelcome}
               alt="Louay Masbah - Welcome Visual"
               className="w-full h-full object-cover"
               loading="eager"
@@ -101,7 +88,7 @@ export default function PortfolioMockup() {
               <div className="flex flex-col gap-2" aria-label="Career documents">
                 <a
                   className="px-3 py-2 rounded-xl text-sm text-white bg-gradient-to-r from-indigo-600 to-violet-600 shadow hover:shadow-md active:shadow-sm transition"
-                  href={LINKS.cvEn}
+                  href={cvEnglish}
                   target="_blank"
                   rel="noreferrer"
                   type="application/pdf"
@@ -110,7 +97,7 @@ export default function PortfolioMockup() {
                 </a>
                 <a
                   className="px-3 py-2 rounded-xl text-sm text-white bg-gradient-to-r from-indigo-600 to-violet-600 shadow hover:shadow-md active:shadow-sm transition"
-                  href={LINKS.cvFr}
+                  href={cvFrench}
                   target="_blank"
                   rel="noreferrer"
                   type="application/pdf"
@@ -308,7 +295,7 @@ export default function PortfolioMockup() {
       <section id="international" className="bg-white border-y py-12">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-indigo-700 to-violet-600 bg-clip-text text-transparent">Languages</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
+        <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-2xl border bg-gray-50/90 p-5 hover:bg-gray-50 transition">
               <div className="font-semibold mb-1">Languages</div>
@@ -335,10 +322,7 @@ export default function PortfolioMockup() {
         <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
         <div className="grid md:grid-cols-3 gap-6">
           {["Volunteering", "Workshops", "Campus initiatives"].map((k) => (
-            <div
-              key={k}
-              className="rounded-2xl border bg-white/90 p-5 shadow-sm hover:shadow-md transition-transform duration-200 hover:-translate-y-0.5"
-            >
+            <div key={k} className="rounded-2xl border bg-white/90 p-5 shadow-sm hover:shadow-md transition-transform duration-200 hover:-translate-y-0.5">
               <div className="font-semibold">{k}</div>
               <p className="text-sm text-slate-600">To be filled in later.</p>
             </div>
@@ -352,7 +336,7 @@ export default function PortfolioMockup() {
           <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-indigo-700 to-violet-600 bg-clip-text text-transparent">
             Sport & Other Activities
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
+        <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
           <div className="grid md:grid-cols-3 gap-6">
             {["Climbing (weekly)", "Saxophone - student band", "Game development / N7 Game Jam"].map((label) => (
               <div key={label} className="rounded-2xl border bg-gray-50/90 p-5 hover:bg-gray-50 transition">
@@ -372,10 +356,7 @@ export default function PortfolioMockup() {
         <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
         <div className="grid md:grid-cols-3 gap-6">
           {["Internships", "PEP / Portfolio of Achievements", "Networking / MyJobGlasses"].map((title) => (
-            <div
-              key={title}
-              className="rounded-2xl border bg-white/90 p-5 shadow-sm hover:shadow-md transition-transform duration-200 hover:-translate-y-0.5"
-            >
+            <div key={title} className="rounded-2xl border bg-white/90 p-5 shadow-sm hover:shadow-md transition-transform duration-200 hover:-translate-y-0.5">
               <div className="font-semibold">{title}</div>
               <p className="text-sm text-slate-600 mt-1">To be filled in later.</p>
             </div>
@@ -388,15 +369,9 @@ export default function PortfolioMockup() {
         <div className="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-3">
           <div>© {new Date().getFullYear()} Louay Masbah</div>
           <div className="flex gap-4">
-            <a href="#welcome" className="hover:text-slate-700">
-              Top
-            </a>
-            <a href={LINKS.email} className="hover:text-slate-700">
-              Email
-            </a>
-            <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-slate-700">
-              LinkedIn
-            </a>
+            <a href="#welcome" className="hover:text-slate-700">Top</a>
+            <a href={LINKS.email} className="hover:text-slate-700">Email</a>
+            <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-slate-700">LinkedIn</a>
           </div>
         </div>
       </footer>

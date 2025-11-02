@@ -9,8 +9,8 @@ export default function PortfolioMockup() {
   const BASE = import.meta.env.BASE_URL;
 
   const LINKS = {
-    cvEn: `${BASE}cv-en.pdf`,
-    cvFr: `${BASE}cv-fr.pdf`,
+    cvEn: `"./CV eng-fr-1.pdf"`,
+    cvFr: `"./CV eng-fr-2.pdf"`,
     linkedin: "https://www.linkedin.com/in/louay-masbah-711188341",
     email: "mailto:louaymasbah@gmail.com",
     pitchVideoWatch: "https://www.youtube.com/watch?v=2CWVGHkkWy8",

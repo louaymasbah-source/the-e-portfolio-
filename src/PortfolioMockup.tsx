@@ -80,18 +80,27 @@ const LINKS = {
             </div>
             <div className="md:col-span-2 rounded-2xl border bg-white p-3 overflow-hidden">
               <div className="text-sm uppercase tracking-wider text-slate-500 px-2 pt-2">Elevator Pitch</div>
-              <div className="aspect-video grid place-items-center p-6 text-center">
-                <div>
-                  <div className="text-slate-700 text-sm">Embed your 2-3 minute video here (YouTube/Drive) or use the button below.</div>
-                  <a
-                    href={LINKS.pitchVideo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-block mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white"
-                  >
-                    Watch video
-                  </a>
-                </div>
+<div className="aspect-video rounded-xl overflow-hidden border">
+  <iframe
+    src="https://www.youtube.com/embed/2CWVGHkkWy8"
+    title="Elevator pitch"
+    className="w-full h-full"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
+<div className="p-3">
+  <a
+    href="https://www.youtube.com/watch?v=2CWVGHkkWy8"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block mt-3 px-4 py-2 rounded-xl bg-slate-900 text-white"
+  >
+    Open on YouTube
+  </a>
+</div>
+
               </div>
             </div>
           </div>

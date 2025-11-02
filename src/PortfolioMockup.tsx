@@ -53,12 +53,13 @@ const LINKS = {
           </div>
           <div className="aspect-video rounded-2xl bg-white/80 border shadow-md ring-1 ring-indigo-100 overflow-hidden">
             <img
-              src="/photo.jpg"
-              alt="Louay Masbah - Welcome Visual"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
+  src={`${BASE}photo.jpg`}
+  alt="Louay Masbah - Welcome Visual"
+  className="w-full h-full object-cover"
+  loading="eager"
+  decoding="async"
+/>
+
           </div>
         </div>
       </section>

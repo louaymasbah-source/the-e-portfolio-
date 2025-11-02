@@ -61,15 +61,18 @@ export default function PortfolioMockup() {
               Interested in AI and software engineering. This portfolio gathers my CVs, projects, elevator pitch, and international mobility plans.
             </p>
           </div>
-          <div className="aspect-video rounded-2xl bg-white/80 border shadow-md ring-1 ring-indigo-100 overflow-hidden">
-            <img
-              src={photoWelcome}
-              alt="Louay Masbah - Welcome Visual"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
-          </div>
+          <div className="rounded-2xl bg-white/80 border shadow-md ring-1 ring-indigo-100 overflow-hidden">
+  <div className="aspect-[3/4]"> {/* portrait-friendly ratio */}
+    <img
+      src={photoWelcome}
+      alt="Louay Masbah - Welcome Visual"
+      className="w-full h-full object-cover object-[50%_20%]" // focus a bit higher
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+</div>
+
         </div>
       </section>
 

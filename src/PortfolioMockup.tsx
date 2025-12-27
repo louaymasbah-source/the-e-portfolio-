@@ -19,7 +19,9 @@ export default function PortfolioMockup() {
       "https://drive.google.com/file/d/1rBdeMRVXxDqWugvwFWGsc1NjZCaESYF3/preview",
     tipeNotes:
       "https://docs.google.com/document/d/1n04_DgZ6X4YsNfIAeyFvhVteFrTsB5RaXlLdyD2nBr0/preview",
+    jpIntro: "https://www.youtube-nocookie.com/embed/cVgeoIHssAE",
   };
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 via-white to-violet-50 text-slate-800 relative overflow-x-hidden">
@@ -183,7 +185,39 @@ export default function PortfolioMockup() {
             {mobTab === "LV2" && (
               <div className="rounded-2xl border bg-white p-6 text-sm text-slate-700">
                 <div className="font-semibold mb-1">LV2</div>
-                <p>Japanese (LV2) with Prof. Yoshiko Omatsu; interested in the “séjour linguistique” program.</p>
+                <section id="jp-intro" className="max-w-6xl mx-auto px-4 pb-12">
+  <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-indigo-700 to-violet-600 bg-clip-text text-transparent">
+    Japanese Self-Introduction
+  </h2>
+  <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full mb-4" />
+
+  <div className="rounded-2xl border bg-white p-3 shadow-sm">
+    <div className="aspect-video overflow-hidden rounded-xl">
+      <iframe
+        src={LINKS.jpIntro}
+        title="Japanese Self-Introduction — Louay Masbah"
+        className="w-full h-full"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
+
+    {/* Optional fallback link */}
+    <div className="mt-3 text-sm">
+      If the video doesn’t load, watch it{" "}
+      <a
+        href="https://youtu.be/cVgeoIHssAE"
+        target="_blank"
+        rel="noreferrer"
+        className="text-indigo-600 underline underline-offset-4 hover:text-indigo-700"
+      >
+        on YouTube
+      </a>.
+    </div>
+  </div>
+</section>
+
               </div>
             )}
             {mobTab === "PCE" && (
